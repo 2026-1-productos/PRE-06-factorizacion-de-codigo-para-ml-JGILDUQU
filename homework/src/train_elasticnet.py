@@ -26,15 +26,18 @@ save_model(estimator)
 print()
 print(estimator, ":", sep="")
 
-# Metricas de error durante entrenamiento
-
-
 mse, mae, r2 = calculate_metrics(x_train, y_train, estimator)
-print_metrics(mse, mae, r2, titulo="Metricas de entrenamiento:")
-
-
-# Metricas de error durante testing
-
+print_metrics(
+    mse,
+    mae,
+    r2,
+    titulo="Metricas de entrenamiento:",
+)
 
 mse, mae, r2 = calculate_metrics(x_test, y_test, estimator)
-print_metrics(mse, mae, r2, titulo="Metricas de testing:")
+print_metrics(
+    mse,
+    mae,
+    r2,
+    titulo="Metricas de testing:",
+)
